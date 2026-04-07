@@ -58,6 +58,29 @@ img {
 	color: var(--color-bg);
 }
 
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-primary);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-accent);
+}
+
+html {
+	scrollbar-color: var(--color-primary) var(--color-bg);
+	scrollbar-width: thin;
+}
+
 /* ===== Header & Nav ===== */
 .site-header {
 	border-bottom: 1px solid var(--color-border);
@@ -120,27 +143,47 @@ main {
 
 /* ===== Hero ===== */
 .hero {
-	padding: 6rem 0 5rem;
+	padding: 12rem 2rem 10rem;
 	text-align: center;
+	background: var(--color-primary);
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	margin-top: -3rem;
+	width: 100vw;
+	overflow: hidden;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.hero-inner {
+	will-change: transform;
 }
 
 .hero h1 {
-	color: var(--color-primary);
+	color: var(--color-bg);
 	line-height: 1;
 	display: flex;
 	justify-content: center;
+	max-width: var(--max-width);
+	margin: 0 auto;
 }
 
-.hero .site-logo {
-	height: 7rem;
-	width: auto;
+.hero h1 .site-logo {
+	width: 100%;
+	height: auto;
 }
 
 .hero p {
-	color: var(--color-muted);
+	color: var(--color-bg);
 	font-size: 1rem;
 	margin: 1.5rem auto 0;
 	max-width: 480px;
+	position: relative;
 }
 
 /* ===== Sections ===== */
