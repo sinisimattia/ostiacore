@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: News
+title: Notizie
 permalink: /announcements/
 ---
 
-<h1>News</h1>
+<h1>{{ "nav.news" | t }}</h1>
 <div class="news-list">
   {% for post in collections.announcements %}
     <article class="news-card">

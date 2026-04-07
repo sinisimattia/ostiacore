@@ -1,3 +1,6 @@
+const i18n = require("./src/_data/i18n.json");
+const site = require("./src/_data/site.json");
+
 module.exports = function (eleventyConfig) {
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/css");
@@ -18,9 +21,24 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
-  // Date formatting filter
+  // Translation filter: {{ "nav.home" | t }}
+  // Uses page lang, falls back to site default lang
+  eleventyConfig.addFilter("t", function (key) {
+    const lang = this.ctx.lang || site.lang || "it";
+    const keys = key.split(".");
+    let value = i18n[lang];
+    for (const k of keys) {
+      if (!value) break;
+      value = value[k];
+    }
+    return value || key;
+  });
+
+  // Locale-aware date formatting
   eleventyConfig.addFilter("dateFormat", function (date) {
-    return new Date(date).toLocaleDateString("en-US", {
+    const lang = this.ctx.lang || site.lang || "it";
+    const locale = lang === "it" ? "it-IT" : "en-US";
+    return new Date(date).toLocaleDateString(locale, {
       year: "numeric",
       month: "long",
       day: "numeric",

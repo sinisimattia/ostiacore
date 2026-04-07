@@ -1,0 +1,44 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "events": "Events",
+      "news": "News",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "home": {
+      "welcome": "Welcome to the official site. Music, shows, and everything in between.",
+      "upcomingShows": "Upcoming Shows",
+      "noShows": "No upcoming shows right now. Stay tuned!",
+      "allEvents": "All Events",
+      "latestNews": "Latest News",
+      "noNews": "No news yet. Check back soon!",
+      "allNews": "All News"
+    },
+    "event": {
+      "getTickets": "Get Tickets"
+    }
+  },
+  "it": {
+    "nav": {
+      "home": "Home",
+      "events": "Eventi",
+      "news": "Notizie",
+      "about": "Chi siamo",
+      "contact": "Contatti"
+    },
+    "home": {
+      "welcome": "Benvenuti nel sito ufficiale. Musica, concerti e tutto il resto.",
+      "upcomingShows": "Prossimi Concerti",
+      "noShows": "Nessun concerto in programma. Restate sintonizzati!",
+      "allEvents": "Tutti gli Eventi",
+      "latestNews": "Ultime Notizie",
+      "noNews": "Nessuna notizia per ora. Tornate presto!",
+      "allNews": "Tutte le Notizie"
+    },
+    "event": {
+      "getTickets": "Acquista Biglietti"
+    }
+  }
+}

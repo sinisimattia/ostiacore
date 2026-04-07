@@ -17,6 +17,7 @@ collections:
       - { label: "Venue", name: "venue", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Ticket URL", name: "ticketUrl", widget: "string", required: false }
+      - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "announcements"
@@ -28,6 +29,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Excerpt", name: "excerpt", widget: "string" }
+      - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -40,6 +42,7 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }
           - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
@@ -48,4 +51,5 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }
           - { label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/" }
+          - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
           - { label: "Body", name: "body", widget: "markdown" }

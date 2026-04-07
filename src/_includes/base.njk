@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or site.lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,11 @@
     <nav>
       <a href="/" class="logo">{{ site.name }}</a>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/events/">Events</a></li>
-        <li><a href="/announcements/">News</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/">{{ "nav.home" | t }}</a></li>
+        <li><a href="/events/">{{ "nav.events" | t }}</a></li>
+        <li><a href="/announcements/">{{ "nav.news" | t }}</a></li>
+        <li><a href="/about/">{{ "nav.about" | t }}</a></li>
+        <li><a href="/contact/">{{ "nav.contact" | t }}</a></li>
       </ul>
     </nav>
   </header>

@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: Events
+title: Eventi
 permalink: /events/
 ---
 
-<h1>Events</h1>
+<h1>{{ "nav.events" | t }}</h1>
 <div class="events-list">
   {% for event in collections.events %}
     <a href="{{ event.url }}" class="event-card">

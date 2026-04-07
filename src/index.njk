@@ -9,11 +9,11 @@ title: Home
 
 <section class="hero">
   <h1>{{ site.name }}</h1>
-  <p>Welcome to the official site. Music, shows, and everything in between.</p>
+  <p>{{ "home.welcome" | t }}</p>
 </section>
 
 <section class="upcoming-events">
-  <h2>Upcoming Shows</h2>
+  <h2>{{ "home.upcomingShows" | t }}</h2>
   {% set events = collections.events %}
   {% if events.length %}
     <div class="events-grid">
@@ -27,13 +27,13 @@ title: Home
       {% endfor %}
     </div>
   {% else %}
-    <p>No upcoming shows right now. Stay tuned!</p>
+    <p>{{ "home.noShows" | t }}</p>
   {% endif %}
-  <a href="/events/" class="btn">All Events</a>
+  <a href="/events/" class="btn">{{ "home.allEvents" | t }}</a>
 </section>
 
 <section class="latest-news">
-  <h2>Latest News</h2>
+  <h2>{{ "home.latestNews" | t }}</h2>
   {% set news = collections.announcements %}
   {% if news.length %}
     {% for post in news.slice(0, 3) %}
@@ -44,7 +44,7 @@ title: Home
       </article>
     {% endfor %}
   {% else %}
-    <p>No news yet. Check back soon!</p>
+    <p>{{ "home.noNews" | t }}</p>
   {% endif %}
-  <a href="/announcements/" class="btn">All News</a>
+  <a href="/announcements/" class="btn">{{ "home.allNews" | t }}</a>
 </section>

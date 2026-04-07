@@ -8,6 +8,6 @@ layout: base.njk
     {% if venue %}<span class="event-venue">{{ venue }}</span>{% endif %}
     {% if location %}<span class="event-location">{{ location }}</span>{% endif %}
   </div>
-  {% if ticketUrl %}<a href="{{ ticketUrl }}" class="btn">Get Tickets</a>{% endif %}
+  {% if ticketUrl %}<a href="{{ ticketUrl }}" class="btn">{{ "event.getTickets" | t }}</a>{% endif %}
   {{ content | safe }}
 </article>

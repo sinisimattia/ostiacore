@@ -1,9 +1,10 @@
 ---
 layout: page.njk
-title: Contact
+title: Contatti
+lang: it
 permalink: /contact/
 ---
 
-Want to book us or just say hi?
+Vuoi prenotarci o semplicemente salutarci?
 
-Drop us a line at **your@email.com** or hit us up on social media.
+Scrivici a **your@email.com** o contattaci sui social.

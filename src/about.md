@@ -1,7 +1,8 @@
 ---
 layout: page.njk
-title: About
+title: Chi siamo
+lang: it
 permalink: /about/
 ---
 
-We're a band from Ostia. More info coming soon.
+Siamo una band di Ostia. Altre informazioni in arrivo.

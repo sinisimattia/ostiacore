@@ -1,7 +1,8 @@
 {
   "name": "Your Band Name",
   "url": "https://yourbandname.com",
-  "description": "Official website",
+  "lang": "it",
+  "description": "Sito ufficiale",
   "social": {
     "instagram": "",
     "facebook": "",
