@@ -1,12 +1,12 @@
 {
-  "name": "Your Band Name",
-  "url": "https://yourbandname.com",
-  "lang": "it",
-  "description": "Sito ufficiale",
-  "social": {
-    "instagram": "",
-    "facebook": "",
-    "spotify": "",
-    "youtube": ""
-  }
+	"name": "OstiaCORE",
+	"url": "https://yourbandname.com",
+	"lang": "it",
+	"description": "Sito ufficiale",
+	"social": {
+		"instagram": "",
+		"facebook": "",
+		"spotify": "",
+		"youtube": ""
+	}
 }
