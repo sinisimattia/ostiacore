@@ -5,7 +5,7 @@ layout: base.njk
 {# ========================================
    HOMEPAGE — edit this HTML however you like
    ======================================== #}
-<section class="hero">
+<section class="hero"{% if site.heroBackground %} style="background-image: url('{{ site.heroBackground }}');"{% endif %}>
     <div class="hero-inner">
         <h1>{% include "logo.njk" %}</h1>
         <p>{{ site.description }}</p>

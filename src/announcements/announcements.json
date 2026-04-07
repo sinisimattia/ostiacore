@@ -2,5 +2,5 @@
   "layout": "announcement.njk",
   "tags": "announcements",
   "lang": "it",
-  "permalink": "/announcements/{{ page.fileSlug }}/"
+  "permalink": "/announcements/{{ slug or page.fileSlug }}/"
 }

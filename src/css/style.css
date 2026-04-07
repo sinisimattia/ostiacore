@@ -197,6 +197,8 @@ main {
 	padding: 12rem 2rem 10rem;
 	text-align: center;
 	background: var(--color-primary);
+	background-size: cover;
+	background-position: center;
 	position: relative;
 	left: 50%;
 	right: 50%;

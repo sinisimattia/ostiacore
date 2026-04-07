@@ -47,6 +47,7 @@ collections:
           - { label: "Site URL", name: "url", widget: "string" }
           - { label: "Default Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
           - { label: "Description", name: "description", widget: "string" }
+          - { label: "Hero Background Image", name: "heroBackground", widget: "image", required: false }
           - label: "Contact"
             name: "contact"
             widget: "object"

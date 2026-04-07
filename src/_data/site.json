@@ -1,20 +1,21 @@
 {
-  "name": "OSTIACORE",
-  "url": "https://ostiacore.live",
-  "lang": "it",
-  "description": "Hardcore scene from Litorale Romano",
-  "contact": {
-    "email": "",
-    "phone": "",
-    "dm": "https://www.instagram.com/ostiacore/"
-  },
-  "social": {
-    "instagram": "https://www.instagram.com/ostiacore/",
-    "facebook": "",
-    "spotify": "",
-    "youtube": "",
-    "bandcamp": "",
-    "tiktok": "",
-    "soundcloud": ""
-  }
+	"name": "OSTIACORE",
+	"url": "https://ostiacore.live",
+	"lang": "it",
+	"description": "Hardcore scene from Litorale Romano",
+	"heroBackground": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTVwczNkYTRpa200dWYxdHFrazFvankyOGM4NW9rM2E0OW5xbWdmbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqJNV627VB8BUenwEy/giphy.gif",
+	"contact": {
+		"email": "",
+		"phone": "",
+		"dm": "https://www.instagram.com/ostiacore/"
+	},
+	"social": {
+		"instagram": "https://www.instagram.com/ostiacore/",
+		"facebook": "",
+		"spotify": "",
+		"youtube": "",
+		"bandcamp": "",
+		"tiktok": "",
+		"soundcloud": ""
+	}
 }

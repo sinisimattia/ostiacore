@@ -2,5 +2,5 @@
   "layout": "event.njk",
   "tags": "events",
   "lang": "it",
-  "permalink": "/events/{{ page.fileSlug }}/"
+  "permalink": "/events/{{ slug or page.fileSlug }}/"
 }
