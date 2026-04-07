@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <nav>
-      <a href="/" class="logo">{{ site.name }}</a>
+      <a href="/" class="logo">{% include "logo.njk" %}</a>
       <ul class="nav-links">
         <li><a href="/">{{ "nav.home" | t }}</a></li>
         <li><a href="/events/">{{ "nav.events" | t }}</a></li>
