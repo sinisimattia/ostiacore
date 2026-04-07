@@ -35,6 +35,35 @@ collections:
       - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Settings"
+        name: "site"
+        file: "src/_data/site.json"
+        format: "json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Default Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
+          - { label: "Description", name: "description", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram (username)", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook (username)", name: "facebook", widget: "string", required: false }
+              - { label: "Spotify (full URL)", name: "spotify", widget: "string", required: false }
+              - { label: "YouTube (full URL)", name: "youtube", widget: "string", required: false }
+              - { label: "Bandcamp (full URL)", name: "bandcamp", widget: "string", required: false }
+              - { label: "TikTok (username)", name: "tiktok", widget: "string", required: false }
+
   - name: "pages"
     label: "Pages"
     files:

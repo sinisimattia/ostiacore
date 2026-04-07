@@ -15,6 +15,11 @@
   <header class="site-header">
     <nav>
       <a href="/" class="logo">{% include "logo.njk" %}</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
       <ul class="nav-links">
         <li><a href="/events/">{{ "nav.events" | t }}</a></li>
         <li><a href="/announcements/">{{ "nav.news" | t }}</a></li>
@@ -23,6 +28,7 @@
       </ul>
     </nav>
   </header>
+  <div class="sidebar-overlay"></div>
 
   <main>
     {{ content | safe }}
@@ -36,9 +42,46 @@
         {% if site.social.facebook %}<a href="https://facebook.com/{{ site.social.facebook }}">Facebook</a>{% endif %}
         {% if site.social.spotify %}<a href="{{ site.social.spotify }}">Spotify</a>{% endif %}
         {% if site.social.youtube %}<a href="{{ site.social.youtube }}">YouTube</a>{% endif %}
+        {% if site.social.bandcamp %}<a href="{{ site.social.bandcamp }}">Bandcamp</a>{% endif %}
+        {% if site.social.tiktok %}<a href="https://tiktok.com/@{{ site.social.tiktok }}">TikTok</a>{% endif %}
+        {% if site.contact.email %}<a href="mailto:{{ site.contact.email }}">Email</a>{% endif %}
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.querySelector('.nav-links');
+      var overlay = document.querySelector('.sidebar-overlay');
+      var body = document.body;
+
+      function open() {
+        nav.classList.add('open');
+        overlay.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('active');
+        body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        nav.classList.remove('open');
+        overlay.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('active');
+        body.style.overflow = '';
+      }
+
+      toggle.addEventListener('click', function () {
+        nav.classList.contains('open') ? close() : open();
+      });
+
+      overlay.addEventListener('click', close);
+
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function (user) {
