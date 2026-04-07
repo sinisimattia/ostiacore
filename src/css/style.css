@@ -84,6 +84,10 @@ html {
 /* ===== Header & Nav ===== */
 .site-header {
 	border-bottom: 1px solid var(--color-border);
+	background: var(--color-bg);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .site-header nav {
@@ -528,6 +532,36 @@ section h2 {
 	margin: 1.5rem 0;
 }
 
+/* ===== Contact List ===== */
+.contact-list {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.contact-list li {
+	margin: 0;
+}
+
+.contact-list a {
+	display: block;
+	padding: 1rem 1.5rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	color: var(--color-primary);
+	font-family: var(--font-heading);
+	font-size: 1.4rem;
+	letter-spacing: 0.06em;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.contact-list a:hover {
+	background: var(--color-surface-hover);
+	border-color: var(--color-primary);
+	color: var(--color-accent);
+}
+
 /* ===== Buttons ===== */
 .btn {
 	display: inline-block;
@@ -559,14 +593,15 @@ section h2 {
 	margin: 0 auto;
 	padding: 1.5rem 2rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 1rem 2rem;
 	font-size: 0.75rem;
 	color: var(--color-muted);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	text-align: center;
 }
 
 .social-links {

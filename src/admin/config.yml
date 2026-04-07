@@ -53,32 +53,25 @@ collections:
             fields:
               - { label: "Email", name: "email", widget: "string", required: false }
               - { label: "Phone", name: "phone", widget: "string", required: false }
+              - { label: "Direct Message (full URL)", name: "dm", widget: "string", required: false }
           - label: "Social Links"
             name: "social"
             widget: "object"
             fields:
-              - { label: "Instagram (username)", name: "instagram", widget: "string", required: false }
-              - { label: "Facebook (username)", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram (full URL)", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook (full URL)", name: "facebook", widget: "string", required: false }
               - { label: "Spotify (full URL)", name: "spotify", widget: "string", required: false }
               - { label: "YouTube (full URL)", name: "youtube", widget: "string", required: false }
               - { label: "Bandcamp (full URL)", name: "bandcamp", widget: "string", required: false }
               - { label: "TikTok (username)", name: "tiktok", widget: "string", required: false }
+              - { label: "SoundCloud (full URL)", name: "soundcloud", widget: "string", required: false }
 
   - name: "pages"
     label: "Pages"
     files:
-      - label: "About"
-        name: "about"
-        file: "src/about.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }
-          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
-          - { label: "Language", name: "lang", widget: "select", options: ["it", "en"], default: "it" }
-          - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
-        file: "src/contact.md"
+        file: "src/contact.njk"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }

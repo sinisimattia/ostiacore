@@ -23,7 +23,6 @@
       <ul class="nav-links">
         <li><a href="/events/">{{ "nav.events" | t }}</a></li>
         <li><a href="/announcements/">{{ "nav.news" | t }}</a></li>
-        <li><a href="/about/">{{ "nav.about" | t }}</a></li>
         <li><a href="/contact/">{{ "nav.contact" | t }}</a></li>
       </ul>
     </nav>
@@ -37,15 +36,7 @@
   <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; {{ site.name }} {{ page.date.getFullYear() }}</p>
-      <div class="social-links">
-        {% if site.social.instagram %}<a href="https://instagram.com/{{ site.social.instagram }}">Instagram</a>{% endif %}
-        {% if site.social.facebook %}<a href="https://facebook.com/{{ site.social.facebook }}">Facebook</a>{% endif %}
-        {% if site.social.spotify %}<a href="{{ site.social.spotify }}">Spotify</a>{% endif %}
-        {% if site.social.youtube %}<a href="{{ site.social.youtube }}">YouTube</a>{% endif %}
-        {% if site.social.bandcamp %}<a href="{{ site.social.bandcamp }}">Bandcamp</a>{% endif %}
-        {% if site.social.tiktok %}<a href="https://tiktok.com/@{{ site.social.tiktok }}">TikTok</a>{% endif %}
-        {% if site.contact.email %}<a href="mailto:{{ site.contact.email }}">Email</a>{% endif %}
-      </div>
+      <p class="credit">Website built with <span style="color: var(--color-primary);">&hearts;</span> by <a href="https://snisni.it">Mattia Sinisi</a></p>
     </div>
   </footer>
   <script>

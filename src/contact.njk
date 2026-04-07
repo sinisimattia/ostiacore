@@ -1,0 +1,23 @@
+---
+layout: page.njk
+title: Contatti
+lang: it
+permalink: /contact/
+---
+
+<ul class="contact-list">
+  {% if site.contact.dm %}<li><a href="{{ site.contact.dm }}">Direct Message</a></li>{% endif %}
+  {% if site.contact.email %}<li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>{% endif %}
+  {% if site.contact.phone %}<li><a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a></li>{% endif %}
+</ul>
+
+<h2>Social</h2>
+<ul class="contact-list">
+  {% if site.social.instagram %}<li><a href="{{ site.social.instagram }}">Instagram</a></li>{% endif %}
+  {% if site.social.facebook %}<li><a href="{{ site.social.facebook }}">Facebook</a></li>{% endif %}
+  {% if site.social.spotify %}<li><a href="{{ site.social.spotify }}">Spotify</a></li>{% endif %}
+  {% if site.social.youtube %}<li><a href="{{ site.social.youtube }}">YouTube</a></li>{% endif %}
+  {% if site.social.bandcamp %}<li><a href="{{ site.social.bandcamp }}">Bandcamp</a></li>{% endif %}
+  {% if site.social.tiktok %}<li><a href="https://tiktok.com/@{{ site.social.tiktok }}">TikTok</a></li>{% endif %}
+  {% if site.social.soundcloud %}<li><a href="{{ site.social.soundcloud }}">SoundCloud</a></li>{% endif %}
+</ul>
