@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<article class="event-detail">
+  <h1>{{ title }}</h1>
+  <div class="event-meta">
+    <span class="event-date">{{ date | dateFormat }}</span>
+    {% if venue %}<span class="event-venue">{{ venue }}</span>{% endif %}
+    {% if location %}<span class="event-location">{{ location }}</span>{% endif %}
+  </div>
+  {% if ticketUrl %}<a href="{{ ticketUrl }}" class="btn">Get Tickets</a>{% endif %}
+  {{ content | safe }}
+</article>

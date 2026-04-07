@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <a href="/" class="logo">{{ site.name }}</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/announcements/">News</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; {{ site.name }} {{ page.date.getFullYear() }}</p>
+      <div class="social-links">
+        {% if site.social.instagram %}<a href="https://instagram.com/{{ site.social.instagram }}">Instagram</a>{% endif %}
+        {% if site.social.facebook %}<a href="https://facebook.com/{{ site.social.facebook }}">Facebook</a>{% endif %}
+        {% if site.social.spotify %}<a href="{{ site.social.spotify }}">Spotify</a>{% endif %}
+        {% if site.social.youtube %}<a href="{{ site.social.youtube }}">YouTube</a>{% endif %}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

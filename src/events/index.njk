@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Events
+permalink: /events/
+---
+
+<h1>Events</h1>
+<div class="events-list">
+  {% for event in collections.events %}
+    <a href="{{ event.url }}" class="event-card">
+      <time>{{ event.date | dateFormat }}</time>
+      <h3>{{ event.data.title }}</h3>
+      {% if event.data.venue %}<span class="venue">{{ event.data.venue }}</span>{% endif %}
+      {% if event.data.location %}<span class="location">{{ event.data.location }}</span>{% endif %}
+    </a>
+  {% endfor %}
+</div>

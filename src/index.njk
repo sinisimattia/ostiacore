@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Home
+---
+
+{# ========================================
+   HOMEPAGE — edit this HTML however you like
+   ======================================== #}
+
+<section class="hero">
+  <h1>{{ site.name }}</h1>
+  <p>Welcome to the official site. Music, shows, and everything in between.</p>
+</section>
+
+<section class="upcoming-events">
+  <h2>Upcoming Shows</h2>
+  {% set events = collections.events %}
+  {% if events.length %}
+    <div class="events-grid">
+      {% for event in events %}
+        <a href="{{ event.url }}" class="event-card">
+          <time>{{ event.date | dateFormat }}</time>
+          <h3>{{ event.data.title }}</h3>
+          {% if event.data.venue %}<span class="venue">{{ event.data.venue }}</span>{% endif %}
+          {% if event.data.location %}<span class="location">{{ event.data.location }}</span>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No upcoming shows right now. Stay tuned!</p>
+  {% endif %}
+  <a href="/events/" class="btn">All Events</a>
+</section>
+
+<section class="latest-news">
+  <h2>Latest News</h2>
+  {% set news = collections.announcements %}
+  {% if news.length %}
+    {% for post in news.slice(0, 3) %}
+      <article class="news-card">
+        <time>{{ post.date | dateFormat }}</time>
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.data.excerpt or post.templateContent | truncate(120) }}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No news yet. Check back soon!</p>
+  {% endif %}
+  <a href="/announcements/" class="btn">All News</a>
+</section>
