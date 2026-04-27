@@ -17,4 +17,4 @@ Lineup:
 
 > 🎟️ 5€ alla porta
 
-artwork by ()
+artwork by ()[@andreagadycy](@andreagadycy)
