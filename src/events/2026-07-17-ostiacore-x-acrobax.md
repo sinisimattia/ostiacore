@@ -19,3 +19,5 @@ BEC DE CORBIN ([@becdecorbin.band](https://www.instagram.com/becdecorbin.band/))
 ore: 21:00
 
 ## *`🎟️ 5€ alla porta`*
+
+ARWORK BY [@valeriotatti.dll](https://www.instagram.com/valeriotatti.dll/)
