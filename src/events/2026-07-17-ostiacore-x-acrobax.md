@@ -6,6 +6,16 @@ location: " Via della Vasca Navale, 6, 00146 Roma RM"
 image: /img/uploads/acrobax-bec-falena-talia.jpeg
 lang: it
 ---
-ora: 21:00
+lineup:
 
-ticket: 5€
+TALIA ([@talia.band)](https://www.instagram.com/talia.band/)
+
+FALENA ([@f4lena)](https://www.instagram.com/f4lena_/)
+
+BEC DE CORBIN ([@becdecorbin.band](https://www.instagram.com/becdecorbin.band/))
+
++banco grafiche di [@leichensaft](https://www.instagram.com/leichensaft/)
+
+ore: 21:00
+
+## *`🎟️ 5€ alla porta`*
