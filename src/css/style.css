@@ -675,7 +675,7 @@ section > p {
 }
 
 .btn::after {
-	content: "->";
+	content: ">>";
 	color: var(--color-primary);
 }
 
@@ -959,7 +959,7 @@ section > p {
 }
 
 .contact-list a::after {
-	content: "->";
+	content: ">>";
 	flex: none;
 	font-family: var(--font-body);
 	font-weight: 400;
