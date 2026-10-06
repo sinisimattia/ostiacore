@@ -6,10 +6,15 @@ layout: base.njk
    HOMEPAGE — edit this HTML however you like
    ======================================== #}
 <section class="hero"{% if site.heroBackground %} style="background-image: url('{{ site.heroBackground }}');"{% endif %}>
+    <div class="hero-frame" aria-hidden="true"></div>
+    {% for i in range(3) %}
+        <svg class="hero-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z"/></svg>
+    {% endfor %}
     <div class="hero-inner">
-        <h1>{% include "logo.njk" %}</h1>
-        <p>{{ site.description }}</p>
+        <h1><span class="visually-hidden">{{ site.name }}</span>{% include "logo.njk" %}</h1>
+        <p class="hero-tagline">{{ site.description }}</p>
     </div>
+    <div class="hero-grid" aria-hidden="true"></div>
 </section>
 <script>
     (function () {
@@ -24,9 +29,12 @@ layout: base.njk
         }, { passive: true });
     })();
 </script>
+{% set events = collections.upcomingEvents %}
+{% set pastEvents = collections.pastEvents %}
+{% set news = collections.announcements %}
 <section class="upcoming-events">
+    <p class="section-label" aria-hidden="true">[01] // {{ events.length | countOf("event") }}</p>
     <h2>{{ "home.upcomingShows" | t }}</h2>
-    {% set events = collections.upcomingEvents %}
     {% if events.length %}
         <div class="events-grid">
             {% for event in events %}
@@ -36,13 +44,13 @@ layout: base.njk
         {% else %}
             <p>{{ "home.noShows" | t }}</p>
         {% endif %}
-        {% set pastEvents = collections.pastEvents %}
         {% if not pastEvents.length %}
             <a href="/events/" class="btn">{{ "home.allEvents" | t }}</a>
         {% endif %}
     </section>
     {% if pastEvents.length %}
         <section class="past-events">
+            <p class="section-label" aria-hidden="true">[02] // {{ pastEvents.length | countOf("event") }}</p>
             <h2>{{ "events.pastShows" | t }}</h2>
             <div class="events-grid">
                 {% for event in pastEvents.slice(0, 3) %}
@@ -53,18 +61,20 @@ layout: base.njk
         </section>
     {% endif %}
     <section class="latest-news">
+        <p class="section-label" aria-hidden="true">[{{ "03" if pastEvents.length else "02" }}] // {{ news.length | countOf("news") }}</p>
         <h2>{{ "home.latestNews" | t }}</h2>
-        {% set news = collections.announcements %}
         {% if news.length %}
+            <div class="news-list">
             {% for post in news.slice(0, 3) %}
                 <article class="news-card">
-                    <time>{{ post.date | dateFormat }}</time>
+                    <time datetime="{{ post.date | isoDate }}">{{ post.date | dateFormat }}</time>
                     <h3>
                         <a href="{{ post.url }}">{{ post.data.title }}</a>
                     </h3>
                     <p>{{ post.data.excerpt or post.templateContent | truncate(120) }}</p>
                 </article>
             {% endfor %}
+            </div>
         {% else %}
             <p>{{ "home.noNews" | t }}</p>
         {% endif %}

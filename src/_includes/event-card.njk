@@ -1,9 +1,15 @@
-<a href="{{ event.url }}" class="event-card">
-  {% if event.data.image %}<img src="{{ event.data.image }}" alt="{{ event.data.title }}" class="event-card-cover">{% endif %}
+<a href="{{ event.url }}" class="event-card{% if not (event.date | isUpcoming) %} is-past{% endif %}">
+  {% if event.data.image %}<img src="{{ event.data.image }}" alt="" class="event-card-cover" loading="lazy">{% endif %}
   <div class="event-card-info">
-    <time>{{ event.date | dateFormat }}</time>
+    <time datetime="{{ event.date | isoDate }}">
+      <span class="event-card-day">{{ event.date | dayMonth }}</span>
+      <span class="event-card-when">{{ event.date | dateMeta }}</span>
+    </time>
     <h3>{{ event.data.title }}</h3>
-    {% if event.data.venue %}<span class="venue">{{ event.data.venue }}</span>{% endif %}
-    {% if event.data.location %}<span class="location">{{ event.data.location }}</span>{% endif %}
+    <p class="event-card-place">
+      {% if event.data.venue %}<span class="venue">{{ event.data.venue }}</span>{% endif %}
+      {% if event.data.location %}<span class="location">{{ event.data.location }}</span>{% endif %}
+    </p>
   </div>
+  <span class="event-card-arrow" aria-hidden="true">-&gt;</span>
 </a>

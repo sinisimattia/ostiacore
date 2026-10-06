@@ -5,7 +5,9 @@
       "events": "Events",
       "news": "News",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "menu": "Menu",
+      "close": "Close"
     },
     "home": {
       "upcomingShows": "Upcoming Shows",
@@ -22,6 +24,16 @@
       "getTickets": "Get Tickets",
       "upcoming": "Upcoming",
       "past": "Past event"
+    },
+    "count": {
+      "event": {
+        "one": "event",
+        "other": "events"
+      },
+      "news": {
+        "one": "post",
+        "other": "posts"
+      }
     }
   },
   "it": {
@@ -30,7 +42,9 @@
       "events": "Eventi",
       "news": "Notizie",
       "about": "Chi siamo",
-      "contact": "Contatti"
+      "contact": "Contatti",
+      "menu": "Menu",
+      "close": "Chiudi"
     },
     "home": {
       "upcomingShows": "Prossimi Concerti",
@@ -47,6 +61,16 @@
       "getTickets": "Acquista Biglietti",
       "upcoming": "In programma",
       "past": "Evento concluso"
+    },
+    "count": {
+      "event": {
+        "one": "evento",
+        "other": "eventi"
+      },
+      "news": {
+        "one": "notizia",
+        "other": "notizie"
+      }
     }
   }
 }

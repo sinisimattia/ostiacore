@@ -4,9 +4,10 @@ title: Eventi
 permalink: /events/
 ---
 
-<h1>{{ "nav.events" | t }}</h1>
+<h1 class="page-title">{{ "nav.events" | t }}</h1>
 
 <section class="upcoming-events">
+  <p class="section-label" aria-hidden="true">[01] // {{ collections.upcomingEvents.length | countOf("event") }}</p>
   <h2>{{ "home.upcomingShows" | t }}</h2>
   {% if collections.upcomingEvents.length %}
     <div class="events-list">
@@ -21,6 +22,7 @@ permalink: /events/
 
 {% if collections.pastEvents.length %}
 <section class="past-events">
+  <p class="section-label" aria-hidden="true">[02] // {{ collections.pastEvents.length | countOf("event") }}</p>
   <h2>{{ "events.pastShows" | t }}</h2>
   <div class="events-list">
     {% for event in collections.pastEvents %}

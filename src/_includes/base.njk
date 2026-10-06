@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }} — {{ site.description }}{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="preload" href="/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/martian-mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <div class="hud-bar" aria-hidden="true">
+    <span>41.73°N 12.28°E</span>
+    <span>Litorale Romano</span>
+  </div>
   <header class="site-header">
     <nav>
-      <a href="/" class="logo">{% include "logo.njk" %}</a>
-      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
+      <a href="/" class="logo" aria-label="{{ site.name }}">{% include "logo.njk" %}</a>
+      <button class="menu-toggle" aria-label="{{ 'nav.menu' | t }}" aria-expanded="false">
+        <span class="menu-open">{{ "nav.menu" | t }}</span>
+        <span class="menu-close">{{ "nav.close" | t }}</span>
       </button>
       <ul class="nav-links">
-        <li><a href="/events/">{{ "nav.events" | t }}</a></li>
-        <li><a href="/announcements/">{{ "nav.news" | t }}</a></li>
-        <li><a href="/contact/">{{ "nav.contact" | t }}</a></li>
+        <li><a href="/events/"{% if page.url.startsWith("/events/") %} aria-current="page"{% endif %}>{{ "nav.events" | t }}</a></li>
+        <li><a href="/announcements/"{% if page.url.startsWith("/announcements/") %} aria-current="page"{% endif %}>{{ "nav.news" | t }}</a></li>
+        <li><a href="/contact/"{% if page.url.startsWith("/contact/") %} aria-current="page"{% endif %}>{{ "nav.contact" | t }}</a></li>
       </ul>
     </nav>
   </header>

@@ -11,7 +11,7 @@ layout: base.njk
     {% endif %}
     <h1>{{ title }}</h1>
     <div class="event-meta">
-      <span class="event-date">{{ date | dateFormat }}</span>
+      <time class="event-date" datetime="{{ page.date | isoDate }}">{{ page.date | dateFormat }}, {{ page.date | timeFormat }}</time>
       {% if venue %}<span class="event-venue">{{ venue }}</span>{% endif %}
       {% if location %}<span class="event-location">{{ location }}</span>{% endif %}
     </div>
