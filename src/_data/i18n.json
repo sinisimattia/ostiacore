@@ -15,8 +15,13 @@
       "noNews": "No news yet. Check back soon!",
       "allNews": "All News"
     },
+    "events": {
+      "pastShows": "Past Shows"
+    },
     "event": {
-      "getTickets": "Get Tickets"
+      "getTickets": "Get Tickets",
+      "upcoming": "Upcoming",
+      "past": "Past event"
     }
   },
   "it": {
@@ -35,8 +40,13 @@
       "noNews": "Nessuna notizia per ora. Tornate presto!",
       "allNews": "Tutte le Notizie"
     },
+    "events": {
+      "pastShows": "Concerti Passati"
+    },
     "event": {
-      "getTickets": "Acquista Biglietti"
+      "getTickets": "Acquista Biglietti",
+      "upcoming": "In programma",
+      "past": "Evento concluso"
     }
   }
 }

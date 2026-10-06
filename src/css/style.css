@@ -399,6 +399,24 @@ section h2 {
 	}
 }
 
+.event-detail .event-status {
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.3rem 0.75rem;
+	border: 1px solid var(--color-border);
+	color: var(--color-muted);
+	font-size: 0.7rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.event-detail .event-status.is-upcoming {
+	background: var(--color-primary);
+	border-color: var(--color-primary);
+	color: var(--color-bg);
+}
+
 .event-detail h1 {
 	font-family: var(--font-heading);
 	font-size: 3.5rem;

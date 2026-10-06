@@ -4,6 +4,11 @@ layout: base.njk
 <article class="event-detail{% if image %} has-cover{% endif %}">
   {% if image %}<img src="{{ image }}" alt="{{ title }}" class="event-cover">{% endif %}
   <div class="event-content">
+    {% if page.date | isUpcoming %}
+      <span class="event-status is-upcoming">{{ "event.upcoming" | t }}</span>
+    {% else %}
+      <span class="event-status is-past">{{ "event.past" | t }}</span>
+    {% endif %}
     <h1>{{ title }}</h1>
     <div class="event-meta">
       <span class="event-date">{{ date | dateFormat }}</span>

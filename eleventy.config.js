@@ -7,12 +7,32 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/admin");
 
-  // Events collection, sorted by date ascending (upcoming first)
-  eleventyConfig.addCollection("events", function (collectionApi) {
+  // Events split at build time: anything dated today or later is upcoming.
+  // The site must be rebuilt for events to move from upcoming to past.
+  function isUpcoming(date) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return new Date(date) >= today;
+  }
+
+  // Upcoming events, sorted by date ascending (soonest first)
+  eleventyConfig.addCollection("upcomingEvents", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("src/events/*.md")
+      .filter((event) => isUpcoming(event.date))
       .sort((a, b) => a.date - b.date);
   });
+
+  // Past events, sorted by date descending (most recent first)
+  eleventyConfig.addCollection("pastEvents", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/events/*.md")
+      .filter((event) => !isUpcoming(event.date))
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // Upcoming/past check for templates: {% if page.date | isUpcoming %}
+  eleventyConfig.addFilter("isUpcoming", isUpcoming);
 
   // Announcements collection, sorted by date descending (newest first)
   eleventyConfig.addCollection("announcements", function (collectionApi) {

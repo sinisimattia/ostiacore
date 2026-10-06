@@ -1,0 +1,9 @@
+<a href="{{ event.url }}" class="event-card">
+  {% if event.data.image %}<img src="{{ event.data.image }}" alt="{{ event.data.title }}" class="event-card-cover">{% endif %}
+  <div class="event-card-info">
+    <time>{{ event.date | dateFormat }}</time>
+    <h3>{{ event.data.title }}</h3>
+    {% if event.data.venue %}<span class="venue">{{ event.data.venue }}</span>{% endif %}
+    {% if event.data.location %}<span class="location">{{ event.data.location }}</span>{% endif %}
+  </div>
+</a>
