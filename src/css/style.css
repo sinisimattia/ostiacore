@@ -411,9 +411,16 @@ main {
 	margin: 0 auto;
 }
 
+/* Black logo with a white sticker outline, so it separates from the GIF */
 .hero h1 .site-logo {
+	--outline: 2px;
 	width: 100%;
 	height: auto;
+	filter:
+		drop-shadow(var(--outline) 0 0 var(--color-accent))
+		drop-shadow(calc(-1 * var(--outline)) 0 0 var(--color-accent))
+		drop-shadow(0 var(--outline) 0 var(--color-accent))
+		drop-shadow(0 calc(-1 * var(--outline)) 0 var(--color-accent));
 }
 
 .hero-tagline {
@@ -1013,6 +1020,10 @@ section > p {
 
 	.hero-spark {
 		width: 30px;
+	}
+
+	.hero h1 .site-logo {
+		--outline: 3px;
 	}
 
 	.hero-tagline {
